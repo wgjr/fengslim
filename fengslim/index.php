@@ -9,6 +9,6 @@ $config->setTimeZone();
 
 $app = new \Slim\App;
 
-require 'app/routes/hello.php';
+require 'app/routes/quiz.php';
 
 $app->run();
