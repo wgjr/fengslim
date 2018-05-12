@@ -2,34 +2,27 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app->get('/quiz/{card}', function (Request $request, Response $response, array $args) {
-    //$response->getBody()->write("Hello, $name");
+$app->get('/quiz/{quiz}', function (Request $request, Response $response, array $args) {
+    $quiz = new quiz();
 
-    $resposta = array();
+    $return['data'] = $quiz->get($args['quiz']);
 
-    return json_encode($resposta);
+    return json_encode($return);
 });
 
 $app->post('/quiz/{name}', function (Request $request, Response $response, array $args) {
-    //$response->getBody()->write("Hello, $name");
-
     $resposta = array();
 
     return json_encode($resposta);
 });
 
 $app->delete('/quiz/{name}', function (Request $request, Response $response, array $args) {
-    //$response->getBody()->write("Hello, $name");
-    //$allPostPutVars = $request->getParsedBody();
-
     $resposta = array();
 
     return json_encode($resposta);
 });
 
 $app->put('/quiz/{name}', function (Request $request, Response $response, array $args) {
-    //$response->getBody()->write("Hello, $name");
-
     $resposta = array();
 
     return json_encode($resposta);
